@@ -1,5 +1,5 @@
 const filters=[...document.querySelectorAll('[data-filter]')];
-function filterReleases(artist){let count=0;document.querySelectorAll('.release').forEach(card=>{card.hidden=artist!=='all'&&!card.dataset.artists.split(' ').includes(artist);if(!card.hidden)count++});filters.forEach(b=>{const active=b.dataset.filter===artist;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});document.querySelector('#results').textContent=`${count} releases shown`;}
+function filterReleases(artist){let count=0;document.querySelectorAll('.release').forEach(card=>{card.hidden=artist!=='all'&&!card.dataset.artists.split(' ').includes(artist);if(!card.hidden){card.style.setProperty('--cascade-step',count%3);card.style.setProperty('--mobile-step',count%2);count++}});filters.forEach(b=>{const active=b.dataset.filter===artist;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});document.querySelector('#results').textContent=`${count} releases shown`;}
 filters.forEach(b=>b.addEventListener('click',()=>filterReleases(b.dataset.filter)));
 document.querySelectorAll('[data-artist-link]').forEach(b=>b.addEventListener('click',()=>{filterReleases(b.dataset.artistLink);document.querySelector('#releases').scrollIntoView();filters.find(f=>f.dataset.filter===b.dataset.artistLink).focus({preventScroll:true})}));
 const canvas=document.querySelector('#signal'),ctx=canvas.getContext('2d'),slider=document.querySelector('#tune'),motion=document.querySelector('#motion'),reduce=matchMedia('(prefers-reduced-motion: reduce)');let paused=reduce.matches,t=0,visible=true,raf=0;
@@ -8,3 +8,10 @@ function draw(){const w=canvas.clientWidth,h=canvas.clientHeight,d=Math.min(devi
 function frame(){raf=0;draw();if(!paused&&visible&&!document.hidden){t+=.018;raf=requestAnimationFrame(frame)}}function start(){if(!raf)frame()}
 slider.addEventListener('input',()=>{document.querySelector('#freq').textContent=Number(slider.value).toFixed(1)+' Hz';draw()});motion.addEventListener('click',()=>{paused=!paused;syncButton();start()});reduce.addEventListener('change',e=>{paused=e.matches;syncButton();start()});new ResizeObserver(draw).observe(canvas);new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)start()}).observe(canvas);document.addEventListener('visibilitychange',()=>{if(!document.hidden)start()});start();
 document.querySelectorAll('.art img').forEach(img=>{const fallback=()=>{img.parentElement.classList.add('failed');img.parentElement.dataset.title=img.closest('.release').querySelector('h3').textContent;};img.addEventListener('error',fallback);if(img.complete&&!img.naturalWidth)fallback()});
+
+const releaseCards=[...document.querySelectorAll('.release')];
+if(!reduce.matches&&'IntersectionObserver' in window){
+ const releaseObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');releaseObserver.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+ releaseCards.forEach(card=>{card.classList.add('reveal-ready');releaseObserver.observe(card)});
+ reduce.addEventListener('change',event=>{if(event.matches){releaseCards.forEach(card=>card.classList.add('is-visible'));releaseObserver.disconnect()}});
+}

@@ -11,3 +11,20 @@
 .hero .signal-caption{top:auto;bottom:18px;left:4%;right:4%;font-size:9px}
 .hero .tuner{bottom:156px;right:4%;padding:12px;background:rgba(0,0,0,.75);pointer-events:auto;z-index:2}
 @media(max-width:600px){.hero{min-height:clamp(620px,calc(100svh - 72px),850px);padding-bottom:58px}.hero h1{margin-bottom:170px}.hero .signal-caption{left:5%;right:5%;font-size:8px}.hero .tuner{right:5%;bottom:230px}.hero #signal{opacity:.4}}
+
+/* Staggered release cascade */
+.releases{padding-bottom:160px}
+.release-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:90px 38px;align-items:start;padding-bottom:190px}
+.release{translate:0 calc(var(--cascade-step,0)*90px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.release.reveal-ready{opacity:0;transform:translateY(65px)}
+.release.is-visible,.release:focus-within{opacity:1;transform:translateY(0)}
+.release .art{box-shadow:0 12px 36px #00000012}
+.release-index{position:absolute;top:14px;left:14px;padding:6px 9px;background:rgba(0,0,0,.75);color:white;font-size:9px;pointer-events:none}
+.preorder{position:absolute;top:14px;right:14px;background:#f3f3ed;color:#111;padding:6px 9px;font-size:9px}
+.release h3{font-size:clamp(20px,2.1vw,32px);line-height:1.12;letter-spacing:-.8px}
+.release p{font-size:12px;margin-top:12px}
+.release .release-meta{margin-top:22px;font-size:10px}
+.release .release-meta time{white-space:nowrap}
+@media(max-width:900px){.release-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 24px;padding-bottom:110px}.release{translate:0 calc(var(--mobile-step,0)*75px)}.releases{padding-bottom:85px}}
+@media(max-width:600px){.release-grid{grid-template-columns:1fr;gap:55px;padding-bottom:0}.release{translate:none;width:88%;margin-left:calc(var(--mobile-step,0)*12%)}.release h3{font-size:26px}.release .release-meta{font-size:9px}.release .release-meta time{display:block}.release .art-cta{display:block;opacity:1;transform:none;left:auto;right:12px;bottom:12px;width:auto;padding:10px 12px}.releases{padding-bottom:65px}}
+@media(prefers-reduced-motion:reduce){.release.reveal-ready{opacity:1;transform:none}.release{transition:none}}

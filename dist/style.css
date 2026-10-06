@@ -111,3 +111,20 @@ body.has-player{padding-bottom:106px}
 @media(max-width:900px){.galaxy-viewport{height:610px}.galaxy-bottom{flex-wrap:wrap}.player-copy{width:25%}#player-buy{display:none}}
 @media(max-width:600px){.catalogue-toolbar{align-items:flex-start;flex-direction:column;gap:10px}.galaxy-intro{margin:0}.galaxy-shell{margin-left:-5.6%;margin-right:-5.6%;border-left:0;border-right:0}.galaxy-viewport{height:570px}.galaxy-top,.galaxy-bottom{padding:14px 5%;font-size:9px}.galaxy-bottom p{font-size:8px;margin:0}.galaxy-controls{width:100%;justify-content:space-between}.planet-play{opacity:.8}.music-player{padding:12px 4% calc(12px + env(safe-area-inset-bottom));gap:10px;flex-wrap:wrap}.player-copy{flex:1;width:auto;min-width:100px}.player-transport{gap:2px}.music-player #player-art{width:40px;height:40px}.player-seek{flex-basis:65%;order:2}#player-mute{order:3}#player-close{order:4;width:28px;min-width:28px}#player-buy{display:block;order:3}body.has-player{padding-bottom:160px}}
 @media(prefers-reduced-motion:reduce){.emblem-float,.galaxy-core img,.planet.is-playing .planet-orb{scale:1}.galaxy-core,.planet.is-playing .planet-orb{filter:none;box-shadow:none}}
+
+/* Perspective-projected 3D galaxy */
+.galaxy-world{inset:0;left:0;top:0;width:100%;height:100%;transform:none!important;pointer-events:none;will-change:auto}
+.galaxy-world .orbit{display:none}
+.galaxy-world .planet{pointer-events:auto;width:140px;transform-origin:center;will-change:transform,left,top}
+.planet-orb{width:110px;height:110px;filter:blur(var(--depth-blur,0px));opacity:var(--depth-opacity,1);transition:filter .25s,opacity .25s,box-shadow .25s,scale .25s;border-color:#d9e5f577;box-shadow:inset -25px -18px 32px #000c,0 0 20px #d2e2ff18}
+.planet-orb:after{background:radial-gradient(circle at var(--planet-light,30%) 23%,#fff8 0%,#ffffff15 20%,transparent 36%,#0006 62%,#000e 100%);box-shadow:inset 2px 2px 4px #ffffff55,inset -6px -4px 16px #000c}
+.planet-orb:before{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid #d9e8ff18;box-shadow:0 0 18px #c3d4ee15;pointer-events:none}
+.planet strong,.planet small{opacity:max(.65,var(--depth-opacity,1));text-shadow:0 2px 9px #000,0 1px 2px #000}
+.planet:hover .planet-orb,.planet:focus-visible .planet-orb,.planet.is-playing .planet-orb{filter:blur(0);opacity:1}
+.planet:hover strong,.planet:focus-visible strong,.planet.is-playing strong{opacity:1;color:white}
+.planet:nth-of-type(5n) .planet-orb:before{inset:-13px -23px;border:2px solid #d2dff94d;transform:rotate(-25deg) scaleY(.38);box-shadow:0 0 8px #d2dff925}
+.galaxy-core{left:50%;top:50%;translate:none;transform-origin:center;z-index:1000}
+.galaxy-viewport{background:radial-gradient(ellipse at 50% 50%,#10131b80,transparent 70%);height:720px}
+.galaxy-top:before{content:'3D';padding:3px 6px;border:1px solid #5e6470;color:#d8dde7;font-size:9px}
+.galaxy-top>span:first-child{margin-right:auto}
+@media(max-width:600px){.galaxy-viewport{height:590px}.planet strong{font-size:13px}.planet small{font-size:10px}}

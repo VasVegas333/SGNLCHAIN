@@ -1,0 +1,179 @@
+[
+  {
+    "id": 30861901,
+    "release_id": 7545610,
+    "title": "Saturnalia",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/a9f0b47b-ed83-4020-a84e-e084d206b712.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 30507316,
+    "release_id": 7432004,
+    "title": "Desire",
+    "artists": [
+      "ATARAS"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/aacd1f70-257e-4143-ace1-9e3074f5ea92.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 30261173,
+    "release_id": 7359422,
+    "title": "Drum Frum",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/49943c69-ba97-4284-bdc6-75b5372e18b7.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 30082488,
+    "release_id": 7306367,
+    "title": "Intercell Dreams",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/5c83394d-07e4-4564-abb5-2e7d7297fcfe.LOFI.mp3",
+    "bpm": 144
+  },
+  {
+    "id": 29475464,
+    "release_id": 7123631,
+    "title": "Rave Revolution",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/bbd67dca-436e-4fc8-970e-09e0ad13c09a.LOFI.mp3",
+    "bpm": 143
+  },
+  {
+    "id": 29274224,
+    "release_id": 7046349,
+    "title": "the preacher",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/cc112ad2-78b5-445c-9ad8-ea1735fce73c.LOFI.mp3",
+    "bpm": 142
+  },
+  {
+    "id": 29023946,
+    "release_id": 6963124,
+    "title": "TR Techno",
+    "artists": [
+      "ATARAS"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/f65925e5-1ed4-4cf3-8502-e5dbddc306dc.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 28814926,
+    "release_id": 6897765,
+    "title": "Phase 2",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/33fd1f18-bccc-4564-9cd8-ecdd5066f474.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 28617707,
+    "release_id": 6841210,
+    "title": "A Journey",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/5f2b23af-b3ad-41da-a1ef-7d200ba65f1a.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 28597594,
+    "release_id": 6835787,
+    "title": "Riverside",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/f97d3e41-d0f8-4bdd-8079-d9e951a0290e.LOFI.mp3",
+    "bpm": 142
+  },
+  {
+    "id": 28342187,
+    "release_id": 6761247,
+    "title": "XTC",
+    "artists": [
+      "ATARAS"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/0c72bf1c-f019-4001-aead-815a65254239.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 27978821,
+    "release_id": 6650925,
+    "title": "Thrill Her",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/5dacb596-338c-4d58-8657-6494b53952ce.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 26930196,
+    "release_id": 6433651,
+    "title": "Quake Machine",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/121ef3ee-bb39-4794-948a-4c86f12e4156.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 24294492,
+    "release_id": 5953362,
+    "title": "Lawnmower Man",
+    "artists": [
+      "ATARAS"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/f3089acc-1dfa-4cb7-afa6-803519f2f6c9.LOFI.mp3",
+    "bpm": 140
+  },
+  {
+    "id": 24294269,
+    "release_id": 5953242,
+    "title": "Cosmic Rush",
+    "artists": [
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/fca2ed1d-6973-4f5c-8fc8-33fa1df7dea7.LOFI.mp3",
+    "bpm": 138
+  },
+  {
+    "id": 24233624,
+    "release_id": 5933810,
+    "title": "Signal 1",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/08879a96-8b2a-4142-87ce-95c174602630.LOFI.mp3",
+    "bpm": 70
+  },
+  {
+    "id": 24233623,
+    "release_id": 5933810,
+    "title": "20,000 Members",
+    "artists": [
+      "ATARAS",
+      "BLNCA"
+    ],
+    "sample": "https://geo-samples.beatport.com/track/13514b57-6a55-407c-abb8-337d70b28dd2.LOFI.mp3",
+    "bpm": 140
+  }
+]

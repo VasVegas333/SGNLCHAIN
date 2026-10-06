@@ -28,3 +28,19 @@
 @media(max-width:900px){.release-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 24px;padding-bottom:110px}.release{translate:0 calc(var(--mobile-step,0)*75px)}.releases{padding-bottom:85px}}
 @media(max-width:600px){.release-grid{grid-template-columns:1fr;gap:55px;padding-bottom:0}.release{translate:none;width:88%;margin-left:calc(var(--mobile-step,0)*12%)}.release h3{font-size:26px}.release .release-meta{font-size:9px}.release .release-meta time{display:block}.release .art-cta{display:block;opacity:1;transform:none;left:auto;right:12px;bottom:12px;width:auto;padding:10px 12px}.releases{padding-bottom:65px}}
 @media(prefers-reduced-motion:reduce){.release.reveal-ready{opacity:1;transform:none}.release{transition:none}}
+
+/* SGNLCHAIN emblem integrated with the live signal */
+.hero h1{font-size:clamp(66px,8.5vw,134px);max-width:68%;text-shadow:0 2px 28px #000}
+.signal-emblem{position:absolute;width:min(46vw,580px);height:min(46vw,580px);right:0;top:45%;transform:translateY(-50%);perspective:1000px;pointer-events:none}
+.emblem-float{position:relative;width:100%;height:100%;transform:rotateX(var(--logo-tilt-y,0deg)) rotateY(var(--logo-tilt-x,0deg));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.signal-emblem img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:screen}
+.emblem-mark{opacity:.9;filter:drop-shadow(0 0 12px #ffffff26);animation:emblem-breathe 7s ease-in-out infinite}
+.emblem-echo{opacity:.12;transform:translate(14px,12px) scale(1.015);filter:blur(1px);animation:emblem-echo 7s ease-in-out infinite}
+.emblem-label{position:absolute;bottom:8%;left:0;right:0;text-align:center;font-size:9px;color:#aaa}
+.hero #signal{opacity:.34}
+.signal-paused .signal-emblem img{animation-play-state:paused}
+@keyframes emblem-breathe{0%,100%{translate:0 0;filter:drop-shadow(0 0 12px #ffffff26)}50%{translate:0 -12px;filter:drop-shadow(0 0 24px #ffffff55)}}
+@keyframes emblem-echo{0%,100%{translate:0 0;opacity:.12}50%{translate:9px 2px;opacity:.22}}
+@media(max-width:900px) and (min-width:601px){.hero h1{font-size:8.7vw}.signal-emblem{width:49vw;height:49vw;right:-3%}}
+@media(max-width:600px){.hero{min-height:780px}.hero h1{font-size:14.3vw;max-width:100%;margin-bottom:310px}.signal-emblem{width:340px;height:340px;max-width:90vw;max-height:90vw;right:50%;top:46%;transform:translate(50%,-35%)}.emblem-label{font-size:8px;bottom:4%}.hero .tuner{bottom:218px}.hero #signal{opacity:.28}}
+@media(prefers-reduced-motion:reduce){.signal-emblem img{animation:none}.emblem-float{transition:none}}

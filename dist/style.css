@@ -44,3 +44,5 @@
 @media(max-width:900px) and (min-width:601px){.hero h1{font-size:8.7vw}.signal-emblem{width:49vw;height:49vw;right:-3%}}
 @media(max-width:600px){.hero{min-height:780px}.hero h1{font-size:14.3vw;max-width:100%;margin-bottom:310px}.signal-emblem{width:340px;height:340px;max-width:90vw;max-height:90vw;right:50%;top:46%;transform:translate(50%,-35%)}.emblem-label{font-size:8px;bottom:4%}.hero .tuner{bottom:218px}.hero #signal{opacity:.28}}
 @media(prefers-reduced-motion:reduce){.signal-emblem img{animation:none}.emblem-float{transition:none}}
+
+.signal-emblem{mix-blend-mode:screen}

@@ -109,7 +109,7 @@ document.querySelector('#galaxy-in').addEventListener('click',()=>changeZoom(.15
 document.querySelector('#galaxy-out').addEventListener('click',()=>changeZoom(-.15));
 document.querySelector('#galaxy-reset').addEventListener('click',resetGalaxy);
 document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>setCatalogueView(button.dataset.view)));
-function setCatalogueView(view){const isGalaxy=view==='galaxy';galaxyShell.hidden=!isGalaxy;grid.hidden=isGalaxy;document.querySelectorAll('[data-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===view)));if(isGalaxy){resetGalaxy();}else{document.querySelectorAll('.release').forEach(card=>card.classList.add('is-visible'))}}
+function setCatalogueView(view){galaxyShell.hidden=false;grid.hidden=false;if(view==='galaxy')resetGalaxy();}
 viewport.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,yaw,pitch,moved:false};});
 viewport.addEventListener('pointermove',event=>{if(!drag||drag.id!==event.pointerId)return;const dx=event.clientX-drag.x,dy=event.clientY-drag.y;if(Math.hypot(dx,dy)>6){drag.moved=true;viewport.setPointerCapture(event.pointerId);viewport.classList.add('dragging');window.galaxyJustDragged=true;}if(drag.moved){yaw=drag.yaw+dx*.005;pitch=clamp(drag.pitch+dy*.004,-1.15,1.15);renderScene();}});
 function finishDrag(event){if(!drag||drag.id!==event.pointerId)return;drag=null;viewport.classList.remove('dragging');setTimeout(()=>{window.galaxyJustDragged=false},100);}

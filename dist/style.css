@@ -153,3 +153,11 @@ body.has-player{padding-bottom:106px}
 @media(min-width:1440px){.hero .galaxy-viewport{height:650px}.hero{min-height:850px}}
 @media(max-width:900px) and (min-width:601px){.hero{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);padding-left:3%;padding-right:3%}.hero h1{font-size:5.9vw}.hero-bottom p{font-size:15px}.hero-bottom .button{font-size:11px;padding:16px;gap:15px}.hero .galaxy-viewport{height:550px}}
 @media(max-width:600px){.hero{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto;min-height:0;padding:22px 5% 32px;row-gap:22px}.hero-top{grid-column:1;grid-row:1}.hero h1{grid-column:1;grid-row:2;font-size:12.5vw;margin:20px 0 0;line-height:.88;max-width:100%}.hero .galaxy-shell{grid-column:1;grid-row:3;margin:0 -5.6%;overflow:hidden}.hero .galaxy-viewport{height:470px}.hero .galaxy-top{padding:0 5%}.hero .galaxy-bottom{padding:0 5% 4px}.hero .galaxy-controls{width:100%;justify-content:space-between}.hero-bottom{grid-column:1;grid-row:4;display:grid;grid-template-columns:1fr;gap:20px;padding:0}.hero-bottom p{font-size:16px}.hero-bottom .button{width:100%;font-size:12px}.hero .hero-bottom .tuner{width:100%;max-width:280px}.hero #signal{opacity:.08}nav{gap:14px}nav a{font-size:10px}}
+
+/* Preview volume controls */
+.player-volume{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.player-volume input{width:86px;min-height:40px;margin:0;accent-color:#f3f3ed;cursor:pointer}
+#player-volume-value{width:34px;font-size:10px;color:#b8bdc6;text-align:right;font-variant-numeric:tabular-nums}
+.music-player button:focus-visible,.music-player input:focus-visible{outline:2px solid #f3f3ed;outline-offset:3px}
+@media(min-width:601px) and (max-width:1100px){.music-player{gap:12px}.player-copy{min-width:100px;width:19%}#player-buy{display:none}.player-volume input{width:70px}}
+@media(max-width:600px){.player-seek{flex:1 1 100%;order:2}.player-volume{order:3;flex:1;gap:10px}.player-volume input{width:auto;flex:1;max-width:180px}.player-volume #player-mute{order:0;min-width:48px}#player-buy{order:3}#player-close{order:4}body.has-player{padding-bottom:205px}}

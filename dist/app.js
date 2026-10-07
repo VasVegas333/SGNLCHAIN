@@ -59,7 +59,27 @@ playToggle.addEventListener('click',()=>{if(activeTrack>=0)selectTrack(activeTra
 document.querySelector('#player-prev').addEventListener('click',()=>selectTrack((activeTrack-1+previewTracks.length)%previewTracks.length));
 document.querySelector('#player-next').addEventListener('click',()=>selectTrack((activeTrack+1)%previewTracks.length));
 document.querySelector('#player-close').addEventListener('click',()=>{playRequest++;audio.pause();player.hidden=true;document.body.classList.remove('has-player')});
-document.querySelector('#player-mute').addEventListener('click',event=>{audio.muted=!audio.muted;event.currentTarget.textContent=audio.muted?'Unmute':'Mute';event.currentTarget.setAttribute('aria-pressed',String(audio.muted));event.currentTarget.setAttribute('aria-label',audio.muted?'Unmute preview':'Mute preview')});
+const volumeSlider=document.querySelector('#player-volume'),volumeValue=document.querySelector('#player-volume-value'),muteButton=document.querySelector('#player-mute');
+let lastAudibleVolume=audio.volume||1;
+function syncVolumeUI(){
+ const level=audio.muted?0:Math.round(audio.volume*100),silent=level===0;
+ volumeSlider.value=String(level);volumeSlider.setAttribute('aria-valuetext',level+' percent');
+ volumeValue.textContent=level+'%';volumeSlider.style.setProperty('--volume-level',level+'%');
+ muteButton.textContent=silent?'Unmute':'Mute';muteButton.setAttribute('aria-pressed',String(silent));muteButton.setAttribute('aria-label',silent?'Unmute preview':'Mute preview');
+}
+volumeSlider.addEventListener('input',()=>{
+ const level=Number(volumeSlider.value)/100;
+ audio.volume=level;audio.muted=level===0;
+ if(level>0)lastAudibleVolume=level;
+ syncVolumeUI();
+});
+muteButton.addEventListener('click',()=>{
+ if(audio.muted||audio.volume===0){audio.volume=audio.volume||lastAudibleVolume;audio.muted=false;}
+ else{lastAudibleVolume=audio.volume;audio.muted=true;}
+ syncVolumeUI();
+});
+audio.addEventListener('volumechange',syncVolumeUI);
+syncVolumeUI();
 audio.addEventListener('play',updatePlaybackUI);audio.addEventListener('pause',updatePlaybackUI);
 audio.addEventListener('ended',()=>{announcePlayer('Preview ended · play again or choose the next signal');updatePlaybackUI()});
 audio.addEventListener('error',()=>{announcePlayer('Preview unavailable. Open Beatport to listen.');updatePlaybackUI()});

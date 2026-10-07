@@ -7,7 +7,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/a9f0b47b-ed83-4020-a84e-e084d206b712.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "C Minor",
+    "camelot": "5A"
   },
   {
     "id": 30507316,
@@ -17,7 +19,9 @@
       "ATARAS"
     ],
     "sample": "https://geo-samples.beatport.com/track/aacd1f70-257e-4143-ace1-9e3074f5ea92.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "D Minor",
+    "camelot": "7A"
   },
   {
     "id": 30261173,
@@ -28,7 +32,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/49943c69-ba97-4284-bdc6-75b5372e18b7.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "D Minor",
+    "camelot": "7A"
   },
   {
     "id": 30082488,
@@ -38,7 +44,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/5c83394d-07e4-4564-abb5-2e7d7297fcfe.LOFI.mp3",
-    "bpm": 144
+    "bpm": 144,
+    "key": "Gb Minor",
+    "camelot": "11A"
   },
   {
     "id": 29475464,
@@ -49,7 +57,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/bbd67dca-436e-4fc8-970e-09e0ad13c09a.LOFI.mp3",
-    "bpm": 143
+    "bpm": 143,
+    "key": "Eb Minor",
+    "camelot": "2A"
   },
   {
     "id": 29274224,
@@ -59,7 +69,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/cc112ad2-78b5-445c-9ad8-ea1735fce73c.LOFI.mp3",
-    "bpm": 142
+    "bpm": 142,
+    "key": "B Minor",
+    "camelot": "10A"
   },
   {
     "id": 29023946,
@@ -69,7 +81,9 @@
       "ATARAS"
     ],
     "sample": "https://geo-samples.beatport.com/track/f65925e5-1ed4-4cf3-8502-e5dbddc306dc.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "C Minor",
+    "camelot": "5A"
   },
   {
     "id": 28814926,
@@ -80,7 +94,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/33fd1f18-bccc-4564-9cd8-ecdd5066f474.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "Gb Minor",
+    "camelot": "11A"
   },
   {
     "id": 28617707,
@@ -90,7 +106,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/5f2b23af-b3ad-41da-a1ef-7d200ba65f1a.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "C Major",
+    "camelot": "8B"
   },
   {
     "id": 28597594,
@@ -101,7 +119,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/f97d3e41-d0f8-4bdd-8079-d9e951a0290e.LOFI.mp3",
-    "bpm": 142
+    "bpm": 142,
+    "key": "C Major",
+    "camelot": "8B"
   },
   {
     "id": 28342187,
@@ -111,7 +131,9 @@
       "ATARAS"
     ],
     "sample": "https://geo-samples.beatport.com/track/0c72bf1c-f019-4001-aead-815a65254239.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "D Major",
+    "camelot": "10B"
   },
   {
     "id": 27978821,
@@ -121,7 +143,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/5dacb596-338c-4d58-8657-6494b53952ce.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "F Minor",
+    "camelot": "4A"
   },
   {
     "id": 26930196,
@@ -132,7 +156,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/121ef3ee-bb39-4794-948a-4c86f12e4156.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "D Minor",
+    "camelot": "7A"
   },
   {
     "id": 24294492,
@@ -142,7 +168,9 @@
       "ATARAS"
     ],
     "sample": "https://geo-samples.beatport.com/track/f3089acc-1dfa-4cb7-afa6-803519f2f6c9.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "E Minor",
+    "camelot": "9A"
   },
   {
     "id": 24294269,
@@ -152,7 +180,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/fca2ed1d-6973-4f5c-8fc8-33fa1df7dea7.LOFI.mp3",
-    "bpm": 138
+    "bpm": 138,
+    "key": "A Minor",
+    "camelot": "8A"
   },
   {
     "id": 24233624,
@@ -163,7 +193,9 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/08879a96-8b2a-4142-87ce-95c174602630.LOFI.mp3",
-    "bpm": 70
+    "bpm": 70,
+    "key": "Ab Minor",
+    "camelot": "1A"
   },
   {
     "id": 24233623,
@@ -174,6 +206,8 @@
       "BLNCA"
     ],
     "sample": "https://geo-samples.beatport.com/track/13514b57-6a55-407c-abb8-337d70b28dd2.LOFI.mp3",
-    "bpm": 140
+    "bpm": 140,
+    "key": "E Minor",
+    "camelot": "9A"
   }
 ]
